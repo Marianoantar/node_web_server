@@ -1,8 +1,9 @@
 {
   "name": "proyecto-web-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proyecto de web server para curso de NodeJS",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/app.js",
     "start": "node src/app.js"

@@ -1,13 +1,15 @@
 // requiere la libreria express ya instalada
-const express = require('express');
+// const express = require('express');
+import express from 'express';
 
 // Requiere el modulo integrado 'path' que proporciona utilidades para
 //  trabajar con rutas de archivos y directorios. las funciones y 
 // propiedades que proporciona para manipular rutas de una manera 
 // segura y eficiente en tu aplicación Node.js
-const path = require('path');
+// const path = require('path');
+import path from 'path';
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const { port, public_path = 'public' } = options;
 
     // crea una instancia de la clase express
@@ -31,6 +33,6 @@ const startServer = (options) => {
     // });
 };
 
-module.exports = {
-    startServer
-}
+// module.exports = {
+//     startServer
+// }

@@ -5,18 +5,21 @@
 //  definidas en el archivo .env en el objeto process.env de Node.js. 
 // Esto hace que las variables de entorno definidas en el archivo .env
 //  estén disponibles en toda tu aplicación Node.js.
-require('dotenv').config();
+// require('dotenv').config();
+import env from 'dotenv';
+env.config();
 
 // importar la función get de la librería env-var para acceder y gestionar
 //  las variables de entorno de tu aplicación de una manera más estructurada
 //  y fácil de usar.
-const { get } = require('env-var');
+// const { get } = require('env-var');
+import envvar from 'env-var';
 
-const envs = {
-    PORT: get('PORT').required().asPortNumber(),
-    PUBLIC_PATH: get('PUBLIC_PATH').default('public').asString()
+export const envs = {
+    PORT: envvar.get('PORT').required().asPortNumber(),
+    PUBLIC_PATH: envvar.get('PUBLIC_PATH').default('public').asString()
 };
 
-module.exports = { 
-    envs
-};
+// module.exports = { 
+//     envs
+// };
